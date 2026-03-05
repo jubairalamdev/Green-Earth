@@ -11,7 +11,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- fontAwesome cdn -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Other CSS -->
     <link rel="stylesheet" href="Styles/style.css">
@@ -48,20 +50,165 @@
                 </ul>
             </div>
             <div class="navbar-end">
-                <a class="btn rounded-full bg-theme-secondary shadow-none border-none font-semibold text-theme-primary text-lg">Plant a Tree</a>
+                <a
+                    class="btn rounded-full bg-theme-secondary shadow-none border-none font-semibold text-theme-primary text-lg">Plant
+                    a Tree</a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-
     <section class="bg-success/20 mt-[91px]">
-    <div class=" py-26 flex flex-col items-center text-center hero-section w-11/12 mx-auto max-w-[1440px]">
-        <h2 class="text-5xl font-bold text-neutral-800">Plant a Tree, Grow a Future</h2>
-        <p class="text-neutral-500 mt-2 font-medium">Join our mission to plant 1 million trees and make the Earth greener for future <br> generations.</p>
-        <a class="btn rounded-full bg-theme-secondary shadow-none border-none font-semibold text-theme-primary text-lg mt-6">Get Envolved</a>
-    </div>
+        <div class=" py-26 flex flex-col items-center text-center hero-section w-11/12 mx-auto max-w-[1440px]">
+            <h2 class="text-5xl font-bold text-neutral-800">Plant a Tree, Grow a Future</h2>
+            <p class="text-neutral-500 mt-2 font-medium">Join our mission to plant 1 million trees and make the Earth
+                greener for future <br> generations.</p>
+            <a
+                class="btn rounded-full bg-theme-secondary shadow-none border-none font-semibold text-theme-primary text-lg mt-6">Get
+                Envolved</a>
+        </div>
     </section>
+
+    <!-- Shop Section -->
+    <section class="w-11/12 mx-auto max-w-[1440px] my-26">
+        <h3 class="text-3xl font-bold text-neutral-800 text-center mb-10">Choose Your Trees</h3>
+        <main class="flex space-x-7">
+            <div class="categories-container space-y-1">
+                <h4 class="text-xl font-semibold text-neutral-800 mb-4">Categories</h4>
+                <!-- Add Categories From Server -->
+                <button class="btn bg-theme-primary text-neutral-100 w-full justify-start shadow-none border-none">All
+                    Items</button>
+                <button class="btn btn-soft bg-base-100 shadow-none w-full border-none justify-start">All Items</button>
+                <button class="btn btn-soft bg-base-100 shadow-none w-full border-none justify-start">All Items</button>
+                <button class="btn btn-soft bg-base-100 shadow-none w-full border-none justify-start">All Items</button>
+            </div>
+            <div class="shop-container grid grid-cols-3 gap-3">
+                <!-- Add Products From Server -->
+                <div class="card bg-base-100">
+                    <figure class="p-4">
+                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                            alt="Shoes" class="rounded-lg" />
+                    </figure>
+                    <div class="card-body pt-0 space-y-2">
+                        <h2 class="card-title">Mango Tree</h2>
+                        <p>A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green
+                        </p>
+                        <div class="items-center flex justify-between">
+                            <span class="badge bg-success/20 text-theme-primary">Fruit Tree</span>
+                            <p class="text-lg font-semibold text-end">৳500</p>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn bg-theme-primary w-full rounded-full text-neutral-100">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-base-100">
+                    <figure class="p-4">
+                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                            alt="Shoes" class="rounded-lg" />
+                    </figure>
+                    <div class="card-body pt-0 space-y-2">
+                        <h2 class="card-title">Mango Tree</h2>
+                        <p>A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green
+                        </p>
+                        <div class="items-center flex justify-between">
+                            <span class="badge bg-success/20 text-theme-primary">Fruit Tree</span>
+                            <p class="text-lg font-semibold text-end">৳500</p>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn bg-theme-primary w-full rounded-full text-neutral-100">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-base-100">
+                    <figure class="p-4">
+                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                            alt="Shoes" class="rounded-lg" />
+                    </figure>
+                    <div class="card-body pt-0 space-y-2">
+                        <h2 class="card-title">Mango Tree</h2>
+                        <p>A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green
+                        </p>
+                        <div class="items-center flex justify-between">
+                            <span class="badge bg-success/20 text-theme-primary">Fruit Tree</span>
+                            <p class="text-lg font-semibold text-end">৳500</p>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn bg-theme-primary w-full rounded-full text-neutral-100">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-base-100">
+                    <figure class="p-4">
+                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                            alt="Shoes" class="rounded-lg" />
+                    </figure>
+                    <div class="card-body pt-0 space-y-2">
+                        <h2 class="card-title">Mango Tree</h2>
+                        <p>A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green
+                        </p>
+                        <div class="items-center flex justify-between">
+                            <span class="badge bg-success/20 text-theme-primary">Fruit Tree</span>
+                            <p class="text-lg font-semibold text-end">৳500</p>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn bg-theme-primary w-full rounded-full text-neutral-100">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-base-100">
+                    <figure class="p-4">
+                        <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                            alt="Shoes" class="rounded-lg" />
+                    </figure>
+                    <div class="card-body pt-0 space-y-2">
+                        <h2 class="card-title">Mango Tree</h2>
+                        <p>A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green
+                        </p>
+                        <div class="items-center flex justify-between">
+                            <span class="badge bg-success/20 text-theme-primary">Fruit Tree</span>
+                            <p class="text-lg font-semibold text-end">৳500</p>
+                        </div>
+                        <div class="card-actions">
+                            <button class="btn bg-theme-primary w-full rounded-full text-neutral-100">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-container p-4 space-y-2 bg-base-100 h-fit rounded-xl">
+                <h3 class="text-xl font-semibold">Your Cart</h3>
+                <!-- Make Cart -->
+                <div class="p-3 flex justify-between bg-base-100 cart-items">
+                    <div>
+                        <h4 class="text-lg">Mango Tree</h4>
+                        <p class="text-xl text-neutral-500">৳500 x 1</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-x text-neutral-500"></i>
+                    </div>
+                </div>
+                <div class="p-3 flex justify-between bg-base-100 cart-items">
+                    <div>
+                        <h4 class="text-lg">Mango Tree</h4>
+                        <p class="text-xl text-neutral-500">৳500 x 1</p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-x text-neutral-500"></i>
+                    </div>
+                </div>
+                <hr class="border-neutral-300">
+                <div class="flex justify-between">
+                    <p class="text-lg font-semibold">Total:</p>
+                    <p class="text-lg font-semibold">৳1000</p>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-theme-primary py-5">
+        <p class="text-neutral-100 text-center">© 2025 Green Earth. All Rights Reserved.</p>
+    </footer>
 </body>
 
 </html>

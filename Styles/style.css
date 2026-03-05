@@ -25,6 +25,10 @@
     color: var(--secondary-color)
 }
 
+body {
+    background-color: #cff0dc4d;
+}
+
 .hero-section {
     background-image: url('../assets/hero-leaf1.png'), url('../assets/hero-leaf2.png');
   
@@ -36,4 +40,20 @@
   
   /* Adjust size so they don't overlap or look distorted */
   background-size: contain, contain;
+}
+
+.categories-container {
+    width: 20%;
+}
+
+.shop-container {
+    width: 60%;
+}
+
+.cart-container {
+    width: 20%;
+}
+
+.cart-items {
+    background-color: #cff0dc4d;
 }
