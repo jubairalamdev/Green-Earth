@@ -60,7 +60,7 @@
     <!-- Hero Section -->
     <section class="bg-success/20 mt-[91px]">
         <div class=" py-26 flex flex-col items-center text-center hero-section w-11/12 mx-auto max-w-[1440px]">
-            <h2 class="text-5xl font-bold text-neutral-800">Plant a Tree, Grow a Future</h2>
+            <h2 class="text-3xl md:text-5xl font-bold text-neutral-800">Plant a Tree, Grow a Future</h2>
             <p class="text-neutral-500 mt-2 font-medium">Join our mission to plant 1 million trees and make the Earth
                 greener for future <br> generations.</p>
             <a
@@ -72,45 +72,32 @@
     <!-- Shop Section -->
     <section class="w-11/12 mx-auto max-w-[1440px] my-26">
         <h3 class="text-3xl font-bold text-neutral-800 text-center mb-10">Choose Your Trees</h3>
-        <main class="flex space-x-7">
-            <div class="categories-container space-y-1">
+        <main class="flex space-y-7 lg:space-x-7 lg:flex-row flex-col ">
+            <div class="categories-container space-y-1 w-full lg:w-[20%]">
                 <h4 class="text-xl font-semibold text-neutral-800 mb-4">Categories</h4>
                 <div class="flex flex-col space-y-1" id="categories-section">
 
                 </div>
             </div>
-            <div class="shop-container grid grid-cols-1 gap-3" id="plants-container">
-                <!-- Add Products From Server -->
-                <div class="bg-base-100 rounded-2xl h-fit py-12 flex flex-col items-center">
+            <div class="bg-base-100 rounded-2xl h-fit p-12 flex flex-col items-center w-full lg:w-[60%]" id="selectCategoryContainer">
+                    <img src="./assets/plant.png" alt="plant" class="w-24 mb-5">
                     <h2 class="text-3xl font-bold text-neutral-800">Choose a Category</h2>
                     <p class="text-neutral-500 mt-2 font-medium">Please Choose a Category of Plants from the left sidebar</p>
-                </div>
             </div>
-            <div class="cart-container p-4 space-y-2 bg-base-100 h-fit rounded-xl">
+            <div class="shop-container grid-cols-1 sm:grid-cols-2 gap-3 hidden  w-full lg:w-[60%]" id="plants-container">
+                <!-- Add Products From Server -->
+                
+            </div>
+            <div class="cart-container p-4 space-y-2 bg-base-100 h-fit rounded-xl  w-full lg:w-[20%]">
                 <h3 class="text-xl font-semibold">Your Cart</h3>
                 <!-- Make Cart -->
-                <div class="p-3 flex justify-between bg-base-100 cart-items">
-                    <div>
-                        <h4 class="text-lg">Mango Tree</h4>
-                        <p class="text-xl text-neutral-500">৳500 x 1</p>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-x text-neutral-500"></i>
-                    </div>
-                </div>
-                <div class="p-3 flex justify-between bg-base-100 cart-items">
-                    <div>
-                        <h4 class="text-lg">Mango Tree</h4>
-                        <p class="text-xl text-neutral-500">৳500 x 1</p>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-x text-neutral-500"></i>
-                    </div>
+                <div class="p-4 space-y-2" id="cart-container">
+
                 </div>
                 <hr class="border-neutral-300">
                 <div class="flex justify-between">
                     <p class="text-lg font-semibold">Total:</p>
-                    <p class="text-lg font-semibold">৳1000</p>
+                    <p class="text-lg font-semibold">৳<span id="totalAmount">0</span></p>
                 </div>
             </div>
         </main>

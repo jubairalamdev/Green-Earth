@@ -41,7 +41,9 @@ const categorySwitch = (category_id) => {
 
 const displayCategoryItems = (plants) => {
     let plantsContainer = document.getElementById('plants-container');
-    plantsContainer.classList.replace("grid-cols-1", "grid-cols-3")
+    let selectCategoryContainer = document.getElementById('selectCategoryContainer');
+    selectCategoryContainer.classList.add("hidden");
+    plantsContainer.classList.replace("hidden", "grid")
     plantsContainer.innerHTML = "";
     plants.forEach(plant=> {
         let plantDiv = document.createElement('div');
@@ -60,7 +62,7 @@ const displayCategoryItems = (plants) => {
                             <p class="text-lg font-semibold text-end">৳${plant.price}</p>
                         </div>
                         <div class="card-actions">
-                            <button class="btn bg-theme-primary w-full rounded-full text-neutral-100">Add To Cart</button>
+                            <button class="btn bg-theme-primary w-full rounded-full text-neutral-100"onclick="addToCartEvent('${plant.id}')">Add To Cart</button>
                         </div>
                     </div>
                 </div>
@@ -68,5 +70,67 @@ const displayCategoryItems = (plants) => {
         plantsContainer.appendChild(plantDiv);
     })
 }
+
+const addToCartEvent = (plant_id) => {
+    const url = 'https://openapi.programming-hero.com/api/plants';
+    fetch(url)
+    .then(response => response.json())
+    .then(data => addToCart(data.plants, plant_id))
+}
+
+const addToCart = (plants, plant_id) => {
+    const cartContainer = document.getElementById("cart-container");
+    // console.log(cartContainer)
+    const totalAmount = document.getElementById("totalAmount");
+    const cartItemDiv = document.createElement("div");
+    plants.filter(plant => {
+        if (plant.id == plant_id) {
+            cartItemDiv.innerHTML = `
+                <div class="p-3 flex justify-between bg-base-100 cart-items">
+                    <div>
+                        <h4 class="text-lg">${plant.name}</h4>
+                        <p class="text-xl text-neutral-500">৳${plant.price} x 1</p>
+                    </div>
+                    <button onclick="removeCartEvent(${plant.id})">
+                        <i class="fa-solid fa-x text-neutral-500"></i>
+                    </button>
+                </div>
+            `;
+            cartItemDiv.id =`cartItemId-${plant.id}`;
+            cartContainer.appendChild(cartItemDiv);
+            let oldAmount = parseFloat(totalAmount.innerHTML)
+            totalAmount.innerText = oldAmount + plant.price
+        }
+        else {
+            console.log("add FN DONT WORK")
+        }
+    })
+}
+
+const removeCartEvent = (plant_id) => {
+    const url = 'https://openapi.programming-hero.com/api/plants';
+    fetch(url)
+    .then(response => response.json())
+    .then(data => removeFromCart(data.plants, plant_id))
+}
+
+const removeFromCart = (plants, plant_id) => {
+    const cartContainer = document.getElementById("cart-container");
+    const totalAmount = document.getElementById("totalAmount");
+    const removingCartItem = document.getElementById(`cartItemId-${plant_id}`)
+    plants.filter(plant => {
+        if (plant.id == plant_id) {
+            console.log(cartContainer);
+            cartContainer.removeChild(removingCartItem);
+            let oldAmount = parseFloat(totalAmount.innerHTML)
+            totalAmount.innerText = oldAmount - plant.price
+        }
+        else {
+            console.log("Remove FN DONT WORK")
+        }
+    })
+}
+
+
 
 loadCategories()

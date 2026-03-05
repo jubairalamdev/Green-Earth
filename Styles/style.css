@@ -42,7 +42,7 @@ body {
   background-size: contain, contain;
 }
 
-.categories-container {
+/* .categories-container {
     width: 20%;
 }
 
@@ -52,8 +52,20 @@ body {
 
 .cart-container {
     width: 20%;
-}
+} */
 
 .cart-items {
     background-color: #cff0dc4d;
+}
+
+@media screen and (max-width:1440px) {
+    .hero-section {
+        background-image: none;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .shop-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
