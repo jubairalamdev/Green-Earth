@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Earth</title>
+
+    <!-- TailWind CSS and DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- fontAwesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Other CSS -->
+    <link rel="stylesheet" href="Styles/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar and Header Here -->
+    <header class="shadow-sm bg-theme-primary absolute top-0 w-full text-base-100 ">
+        <div class="navbar w-11/12 mx-auto max-w-[1440px] min-h-[91px]">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="-1"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        <li><a>About</a></li>
+                        <li><a>Gallery</a></li>
+                        <li><a>Plant a Tree</a></li>
+                    </ul>
+                </div>
+                <a class="btn btn-ghost text-3xl">Green Earth</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 text-lg font">
+                    <li><a>About</a></li>
+                    <li><a>Gallery</a></li>
+                    <li><a>Plant a Tree</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <a class="btn rounded-full bg-theme-secondary shadow-none border-none font-semibold text-theme-primary text-lg">Plant a Tree</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+
+    <section class="bg-success/20 mt-[91px]">
+    <div class=" py-26 flex flex-col items-center text-center hero-section w-11/12 mx-auto max-w-[1440px]">
+        <h2 class="text-5xl font-bold text-neutral-800">Plant a Tree, Grow a Future</h2>
+        <p class="text-neutral-500 mt-2 font-medium">Join our mission to plant 1 million trees and make the Earth greener for future <br> generations.</p>
+        <a class="btn rounded-full bg-theme-secondary shadow-none border-none font-semibold text-theme-primary text-lg mt-6">Get Envolved</a>
+    </div>
+    </section>
+</body>
+
+</html>

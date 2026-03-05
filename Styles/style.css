@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  font-family: "Inter", sans-serif;
+}
+
+:root {
+    --primary-color: #15803D;
+    --secondary-color: #FACC15;
+}
+
+.bg-theme-primary{ 
+    background-color: var(--primary-color)
+}
+
+.bg-theme-secondary{ 
+    background-color: var(--secondary-color)
+}
+
+.text-theme-primary{ 
+    color: var(--primary-color)
+}
+
+.text-theme-secondary{ 
+    color: var(--secondary-color)
+}
+
+.hero-section {
+    background-image: url('../assets/hero-leaf1.png'), url('../assets/hero-leaf2.png');
+  
+  /* Match the positions to the order of the images above */
+  background-position: left -100px center, right -100px center;
+  
+  /* Ensure they don't tile across the section */
+  background-repeat: no-repeat, no-repeat;
+  
+  /* Adjust size so they don't overlap or look distorted */
+  background-size: contain, contain;
+}
